@@ -1,0 +1,236 @@
+.outbox-mcatmod {
+   margin-bottom: 15px;
+   border: 3px solid #DDD;  padding: 15px 15px 25px;  background-color: #FFF;
+}
+.box-heading-mcatmod:after {content: ' ';
+height: 4px;
+width: 84px;
+background-color: #AAA;
+position: absolute;
+bottom: -4px;
+left: 1px;}
+.box-heading-mcatmod {
+text-transform: uppercase;  font-weight: bold;  padding-bottom: 12px;  margin-bottom: 25px;  border-bottom: 4px solid #EAEAEA;  
+font-size: 18px;
+position: relative;
+}
+.box-mcatmod {
+
+}
+.box-mcatmod a b {
+    
+}
+.box-mcatmod ul {
+   display: bolck;
+   margin:0;
+   padding: 0;
+   list-style: none;
+   
+}
+.box-mcatmod ul li.catfirst  .catright .mega-desc { 
+
+width: 95%;
+padding-left: 35px;
+padding-right: 1%;
+margin-bottom: 10px;
+color: #777;
+min-height: 150px;
+border-bottom: 1px solid #EEE;}
+.box-mcatmod ul li.catfirst  .catright .mega-desc .mega-descinner{ margin:20px 0 ;}
+.box-mcatmod ul li.catfirst  .catright .mega-desc .image { border: 1px solid #ECECEC; padding: 3px; float: left; margin-right: 15px;}
+.box-mcatmod a {
+
+   display: block;
+   text-decoration: none;
+   
+}
+.box-mcatmod ul {
+   position: relative;
+}
+.box-mcatmod ul li .catright {
+display: none;
+position: absolute;
+top: -38px;
+left: 226px;
+min-height: 120%;
+padding-bottom: 10px;
+width: 760px;
+z-index: 9999;
+background: #FFF;
+border: 3px solid #E7E7E7;
+padding-right: 5px;
+vertical-align: top;
+}
+.box-mcatmod ul li .catright h2 {
+margin-left: 30px;
+margin-top: 20px;
+color: #555;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 18px;
+}
+.box-mcatmod ul li .catright .category-info {
+   margin-left: 15px;
+   margin-bottom: 10px;
+}
+.box-mcatmod ul li.catfirst.act .catright {
+   display: block;
+}
+.box-mcatmod.act ul li.catfirst:hover .catright {
+   display: block;
+}
+.box-mcatmod ul li.catfirst {
+   display: block;
+}
+.box-mcatmod ul li.catfirst {
+}
+.box-mcatmod ul li.catfirst a.lfirst {
+   font-size: 12px;
+  
+   display: block;
+
+   padding-left: 2px;
+   padding-bottom: 10px;
+   
+   
+
+}
+.box-mcatmod ul li.catfirst {
+   background: url('arrow.png') right center no-repeat;
+}
+
+.box-mcatmod ul li.catfirst:hover a.lfirst {
+
+}
+.box-mcatmod ul li.catfirst.kids  a.lfirst{
+
+}
+.box-mcatmod ul li.catfirst.kids:hover a.lfirst {
+
+}
+.box-mcatmod ul li .catright .nochild {
+    vertical-align: top;
+}
+.box-mcatmod ul li .catright .nochild a.ndfirst {
+   width: 164px;
+   margin-left: 10px;
+   padding: 0px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   display: inline-block;
+   font-weight: normal;
+   color: #555;
+   vertical-align: top;
+}
+.box-mcatmod ul li .catright .nochild a.ndfirst:before {
+   content: '> ';
+   color: #aaa;
+   font-family: comic sans ms,cursive;
+}
+.box-mcatmod ul li .catright .nochild a.ndfirst:hover {
+   color: #38B0E3;
+}
+.box-mcatmod ul li .catright li.ndlevel {
+   width: 164px;
+   display: inline-block;
+   vertical-align: top;
+   margin-left: 10px;
+}
+.box-mcatmod ul li .catright li.ndlevel a {
+   
+   
+   padding: 0px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin-top: 10px;
+   font-size: 12px;
+   border-bottom: 1px solid #ddd;
+}
+.box-mcatmod ul li .catright li.ndlevel a:hover {
+   color: #000;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel {
+   border: none;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel a {
+   color: #00AAFF;
+   font-weight: normal;
+   font-size: 12px; 
+   margin-top: 0px;
+   padding-top: 4px;
+   padding-bottom: 4px;   
+   background: none;
+   border: none;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel a:hover {
+   
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel a:before {
+   content: '> ';
+   color: #aaa;
+   font-family: comic sans ms,cursive;
+}
+.box-mcatmod .catright .menu-add {
+   float: right;
+   width: 200px;
+   overflow: hidden;
+   margin-top: 1px;
+   margin-left: 10px;
+   text-align: right;
+   display: inline-block;
+}
+.box-mcatmod .catright .menu-add img {
+   margin: 0px; 
+   padding: 0px;
+}
+.box-mcatmod .catright .menu-add a {
+   margin: 0px;
+   padding: 0px;
+}   
+.inner-catright {
+   padding-left: 20px;
+}
+.inner-catright ul {
+   position: static;
+}
+.box-mcatmod .catright div.gridel {
+   display: inline-block;
+   width: 164px;
+   margin-left: 10px;
+   vertical-align: top;
+   margin-bottom: 8px;
+}
+.box-mcatmod .catright div.gridel .image img {
+   padding: 3px;
+   border: 1px solid #e7e7e7;
+}
+.box-mcatmod .catright div.gridel a {
+   padding: 5px;
+   font-weight: normal;
+}
+.box-mcatmod .catright div.gridel a.gridel-child {
+   font-weight: normal;
+   color: #00AAFF;
+}
+.box-mcatmod .catright div.gridel a.gridel-child:before {
+   content: '> ';
+   color: #aaa;
+   font-family: comic sans ms,cursive;
+   font-size: 11px;
+}
+/*
+.menu-add + .inner-catright {
+   margin-right: 200px;
+}
+.menu-add + .inner-catright div.gridel {
+   width: 31%;
+}
+.menu-add + .inner-catright li.ndlevel {
+   width: 31%;
+}
+.menu-add + .inner-catright .nochild a.ndfirst {
+   width: 31%;
+}
+.menu-add + .inner-catright .nochild a.ndfirst {
+   width: 31%;
+} */

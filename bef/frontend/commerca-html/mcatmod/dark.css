@@ -1,0 +1,111 @@
+.box-heading-mcatmod {
+   padding: 8px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   background: url('bmh2.png') top repeat-x;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-khtml-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	color: #fff;
+    border: 1px solid #111;
+}
+.box-mcatmod {
+    background: #444;
+	border: 1px solid #111;
+	border-top: none;
+	padding: 4px;
+	padding-top: 0px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-khtml-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+}
+.box-mcatmod ul li .catright h2 {
+    color: #eee;
+}
+.box-mcatmod ul li.catfirst a.lfirst {
+   color: #fff;
+   text-shadow: 1px 1px 1px #111;
+   background: url('mcn3.png') left bottom no-repeat;
+}
+.box-mcatmod ul li.catfirst.kids  a.lfirst{
+   background: url('mcn3.png') left bottom no-repeat;
+}
+.box-mcatmod ul li.catfirst:hover a.lfirst {
+   background: #222;
+}
+.box-mcatmod ul li.catfirst.kids:hover a.lfirst {
+   background: #222;
+}
+.box-mcatmod a {
+   color: #fff;
+   text-shadow: 1px 1px 1px #111;
+}
+
+.box-mcatmod a b {
+    color: #eee;
+}
+.box-mcatmod ul li .catright {
+   top: -32px;
+   background: #222;
+   border: 1px solid #111;
+   border-left: none;
+} 
+.box-mcatmod ul li .catright .nochild a.ndfirst {
+   background: #444;
+   padding: 4px;
+   padding-left: 3px;
+   padding-right: 0px;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   -khtml-border-radius: 4px;
+   border-radius: 4px;
+   margin-bottom: 4px;
+   border: 1px solid #111;
+   color: #fff;
+   width: 159px;
+}
+.box-mcatmod ul li .catright .nochild a.ndfirst:hover {
+   background: #111;
+   border: 1px solid #333;
+}
+.box-mcatmod ul li .catright li.ndlevel {
+}
+.box-mcatmod ul li .catright li.ndlevel a {
+   background: #111;
+   padding-left: 4px;
+   border: 1px solid #333;
+   -webkit-border-radius: 4px 4px 0px 0px;
+   -moz-border-radius: 4px 4px 0px 0px;
+   -khtml-border-radius: 4px 4px 0px 0px;
+   border-radius: 4px 4px 0px 0px;
+   color: #fff;
+}
+.box-mcatmod ul li .catright li.ndlevel a:hover {
+   color: #ccc;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel {
+   padding: 4px;
+   background: #444;
+   border: 1px solid #333;
+   border-top: none;
+   -webkit-border-radius: 0px 0px 4px 4px;
+   -moz-border-radius: 0px 0px 4px 4px;
+   -khtml-border-radius: 0px 0px 4px 4px;
+   border-radius: 0px 0px 4px 4px;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel a:hover {
+   color: #fff;
+}
+.box-mcatmod .catright div.gridel .image img {
+   padding: 2px;
+   background: #ddd;
+   border: 2px solid #ddd;
+   background: #fff;
+}
+.box-mcatmod .catright div.gridel:hover .image img {
+   padding: 2px;
+   background: #ddd;
+   border: 2px solid #fff;
+}

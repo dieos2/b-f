@@ -1,0 +1,59 @@
+.box-heading-mcatmod {
+   padding: 8px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   background: url('bmhr.png') top repeat-x;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-khtml-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	color: #fff;
+    border: 1px solid #CC2D1E;
+}
+.box-mcatmod {
+    background: #FF4130;
+	border: 1px solid #CC2D1E;
+	border-top: none;
+	padding: 4px;
+	padding-top: 0px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-khtml-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+}
+.box-mcatmod ul li .catright h2 {
+    color: #CC2D1E;
+}
+.box-mcatmod ul li.catfirst a.lfirst {
+   color: #fff;
+   text-shadow: 1px 1px 1px #CC2D1E;
+   background: url('mcnc.png') left bottom no-repeat;
+}
+.box-mcatmod ul li.catfirst.kids  a.lfirst{
+   background: url('mcnc.png') left bottom no-repeat;
+}
+.box-mcatmod ul li.catfirst:hover a.lfirst {
+   background: #fff;
+   color: #CC2D1E;
+   text-shadow: none;
+}
+.box-mcatmod ul li.catfirst.kids:hover a.lfirst {
+   background: #fff;
+   color: #CC2D1E;
+   text-shadow: none;
+}
+.box-mcatmod ul li .catright .nochild a.ndfirst:hover {
+   color: #CC2D1E;
+}
+.box-mcatmod ul li .catright li.ndlevel ul.rdlevel a {
+   color: #CC2D1E;
+}
+.box-mcatmod .catright div.gridel a.gridel-child { 
+   color: #CC2D1E;
+}
+.box-mcatmod a {
+   text-shadow: 1px 1px 1px #fff;
+}
+.box-mcatmod ul li .catright {
+   top: -32px;
+} 
