@@ -22,7 +22,8 @@
        "mpdf/mpdf":"*",
         "kartik-v/yii2-mpdf": "*",
         "yiisoft/yii2-authclient": "~2.0@dev",
-        "2amigos/yii2-qrcode-helper": "~1.0"
+        "2amigos/yii2-qrcode-helper": "~1.0",
+		"yiister/yii2-gentelella": "~1.0"
         
     },
     "require-dev": {

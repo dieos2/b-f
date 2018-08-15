@@ -9,19 +9,17 @@ use Yii;
  *
  * @property int $id
  * @property string $nome
- * @property string $descricao
  * @property string $preco
- * @property string $data
- * @property int $id_user
  * @property string $preco_custo
- * @property int $id_categoria
- * @property int $NCM
+ * @property string $preco_distribuidor
  * @property int $qtd
- * @property string $distribuidor
- * @property string $lucro
+ * @property int $lucro
+ * @property int $id_fabricante
+ * @property int $id_user
+ * @property int $NCM
  *
  * @property User $user
- * @property Categoria $categoria
+ * @property Fabricante $fabricante
  * @property VendaProduto[] $vendaProdutos
  */
 class Produto extends \yii\db\ActiveRecord
@@ -40,14 +38,12 @@ class Produto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nome', 'preco', 'data', 'id_user', 'preco_custo', 'id_categoria'], 'required'],
-            [['preco', 'preco_custo', 'distribuidor', 'lucro'], 'number'],
-            [['data'], 'safe'],
-            [['id_user', 'id_categoria', 'NCM', 'qtd'], 'integer'],
-            [['nome'], 'string', 'max' => 150],
-            [['descricao'], 'string', 'max' => 500],
+            [['nome', 'preco', 'preco_custo', 'preco_distribuidor', 'qtd', 'lucro', 'id_fabricante', 'id_user'], 'required'],
+            [['preco', 'preco_custo', 'preco_distribuidor'], 'number'],
+            [['qtd', 'lucro', 'id_fabricante', 'id_user', 'NCM'], 'integer'],
+            [['nome'], 'string', 'max' => 100],
             [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
-            [['id_categoria'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['id_categoria' => 'id']],
+            [['id_fabricante'], 'exist', 'skipOnError' => true, 'targetClass' => Fabricante::className(), 'targetAttribute' => ['id_fabricante' => 'id']],
         ];
     }
 
@@ -59,16 +55,14 @@ class Produto extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
-            'descricao' => 'Descricao',
             'preco' => 'Preco',
-            'data' => 'Data',
-            'id_user' => 'Id User',
             'preco_custo' => 'Preco Custo',
-            'id_categoria' => 'Id Categoria',
-            'NCM' => 'Ncm',
+            'preco_distribuidor' => 'Preco Distribuidor',
             'qtd' => 'Qtd',
-            'distribuidor' => 'Distribuidor',
             'lucro' => 'Lucro',
+            'id_fabricante' => 'Id Fabricante',
+            'id_user' => 'Id User',
+            'NCM' => 'Ncm',
         ];
     }
 
@@ -83,9 +77,9 @@ class Produto extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCategoria()
+    public function getFabricante()
     {
-        return $this->hasOne(Categoria::className(), ['id' => 'id_categoria']);
+        return $this->hasOne(Fabricante::className(), ['id' => 'id_fabricante']);
     }
 
     /**
