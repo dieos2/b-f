@@ -33,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
                       <div class="wrapper">
                         <div class="clearfix m-b">
                           <a href="#" class="pull-left thumb m-r">
-                            <img src="/produtos/<?php echo $model->foto ?>" class="img-circle">
+                           
                           </a>
                           <div class="clear">
                             <div class="h3 m-t-xs m-b-xs"><?php echo $model->nome ?></div>
-                            <small class="text-muted"><i class="fa fa-tag"></i> <?php echo $model->idCategoria->categoria ?></small>
+                            <small class="text-muted"><i class="fa fa-tag"></i> <?php echo $model->fabricante->nome ?></small>
                           </div>                
                         </div>
                         <div class="panel wrapper panel-success">
@@ -75,25 +75,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <div>
                           <small class="text-uc text-xs text-muted">Condição</small>
-                         <?php
-                         if($model->novo){
-                             echo '<p>Usado</p>';
-                         }else{
-                             echo '<p>Novo</p>';
-                         }
-                         ?>
-                           <small class="text-uc text-xs text-muted">Vendido</small>
-                         <?php
-                         if($model->vendido){
-                             echo '<p>Não</p>';
-                         }else{
-                             echo '<p>Sim</p>';
-                         }
-                         ?>
-                          <small class="text-uc text-xs text-muted">Descrição</small>
-                          <p><?php echo $model->descricao ?></p>
-                            <small class="text-uc text-xs text-muted">Tamanho</small>
-                          <p><?php echo $model->idTamanho->nome ?></p>
+                        
+                         
+                           
                           <div class="line"></div>
                           <small class="text-uc text-xs text-muted">Codigo</small>
                           <p class="m-t-sm">
@@ -135,18 +119,12 @@ $this->params['breadcrumbs'][] = $this->title;
     text-align: center;
 ">
                               <div class="h3 m-t-xs m-b-xs" style="font-size: 20px"><?php echo $model->nome ?></div>
-                            <small class="text-muted"><i class="fa fa-tag"></i><?php echo $model->idCategoria->categoria ?> </small>
-                             <?php
-                         if($model->novo){
-                             echo '<small><i class="fa fa-tag"></i> Usado</small>';
-                         }else{
-                             echo '<small><i class="fa fa-tag"></i> Novo</small>';
-                         }
-                         ?>
+                            <small class="text-muted"><i class="fa fa-tag"></i><?php echo $model->fabricante->nome ?> </small>
+                           
                                              
-                            <small><i class="fa fa-tag"></i> <?php echo $model->descricao ?></small>
+                          
                             <small><i class="fa fa-tag"></i>cod: <?php echo $model->id ?></small>
-                           <small><i class="fa fa-tag"></i>Tam: <?php echo $model->idTamanho->nome ?></small>
+                          
                           </div>                
                         </div>
               <div class="panel wrapper panel-success" style="padding: 6px; margin-bottom: 0px;  border: solid 1px #000 !important;">

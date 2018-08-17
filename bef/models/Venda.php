@@ -34,7 +34,7 @@ class Venda extends \yii\db\ActiveRecord
     {
         return [
             [['valor', 'data', 'id_cliente'], 'required'],
-            [['valor'], 'number'],
+            [['valor','desconto'], 'number'],
             [['data'], 'safe'],
             [['id_cliente', 'id_caixa'], 'integer'],
             [['id_cliente'], 'exist', 'skipOnError' => true, 'targetClass' => Cliente::className(), 'targetAttribute' => ['id_cliente' => 'id']],
@@ -54,7 +54,8 @@ class Venda extends \yii\db\ActiveRecord
             'data' => 'Data',
             'id_cliente' => 'Id Cliente',
             'id_caixa' => 'Id Caixa',
-            'id_vendaTipo' => 'Id VendaTipo'
+            'id_vendaTipo' => 'Id VendaTipo',
+            'desconto' => 'Desconto'
         ];
     }
 

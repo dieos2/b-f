@@ -7,14 +7,16 @@ use Yii;
 /**
  * This is the model class for table "perfil".
  *
- * @property integer $id
+ * @property int $id
  * @property string $nome
  * @property string $sobrenome
  * @property string $foto
- * @property integer $sexo
+ * @property int $sexo
  * @property string $data
+ * @property int $id_grupo
  *
  * @property User $id0
+ * @property Grupo $grupo
  */
 class Perfil extends \yii\db\ActiveRecord
 {
@@ -32,12 +34,13 @@ class Perfil extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nome', 'data'], 'required'],
-            [['id', 'sexo'], 'integer'],
+            [['nome', 'sobrenome', 'foto', 'sexo', 'data', 'id_grupo'], 'required'],
+            [['sexo', 'id_grupo'], 'integer'],
             [['data'], 'safe'],
             [['nome', 'sobrenome'], 'string', 'max' => 50],
             [['foto'], 'string', 'max' => 40],
             [['id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id' => 'id']],
+            [['id_grupo'], 'exist', 'skipOnError' => true, 'targetClass' => Grupo::className(), 'targetAttribute' => ['id_grupo' => 'id']],
         ];
     }
 
@@ -53,6 +56,7 @@ class Perfil extends \yii\db\ActiveRecord
             'foto' => 'Foto',
             'sexo' => 'Sexo',
             'data' => 'Data',
+            'id_grupo' => 'Id Grupo',
         ];
     }
 
@@ -63,4 +67,15 @@ class Perfil extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'id']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGrupo()
+    {
+        return $this->hasOne(Grupo::className(), ['id' => 'id_grupo']);
+    }
+    public static function getIdGrupo($id){
+    return static::findOne(['id'=> $id])->id_grupo;
+}
 }

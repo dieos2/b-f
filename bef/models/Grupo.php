@@ -7,11 +7,13 @@ use Yii;
 /**
  * This is the model class for table "grupo".
  *
- * @property integer $id
+ * @property int $id
  * @property string $nome
+ * @property string $logo
  *
- * @property Confronto[] $confrontos
- * @property GrupoTime[] $grupoTimes
+ * @property Caixa[] $caixas
+ * @property Perfil[] $perfils
+ * @property Produto[] $produtos
  */
 class Grupo extends \yii\db\ActiveRecord
 {
@@ -29,8 +31,9 @@ class Grupo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nome'], 'required'],
-            [['nome'], 'string', 'max' => 10],
+            [['nome', 'logo'], 'required'],
+            [['nome'], 'string', 'max' => 100],
+            [['logo'], 'string', 'max' => 50],
         ];
     }
 
@@ -42,22 +45,31 @@ class Grupo extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
+            'logo' => 'Logo',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getConfrontos()
+    public function getCaixas()
     {
-        return $this->hasMany(Confronto::className(), ['id_grupo' => 'id']);
+        return $this->hasMany(Caixa::className(), ['id_user' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getGrupoTimes()
+    public function getPerfils()
     {
-        return $this->hasMany(GrupoTime::className(), ['id_grupo' => 'id']);
+        return $this->hasMany(Perfil::className(), ['id_grupo' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProdutos()
+    {
+        return $this->hasMany(Produto::className(), ['id_grupo' => 'id']);
     }
 }

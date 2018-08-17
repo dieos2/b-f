@@ -12,6 +12,7 @@ use yii\filters\AccessControl;
 use app\models\Uploadform;
 use yii\web\UploadedFile;
 use app\models\User;
+use app\models\Perfil;
 use dosamigos\qrcode\formats\MailTo;
 use dosamigos\qrcode\QrCode;
 use yii\data\Pagination;
@@ -112,32 +113,18 @@ class ProdutoController extends Controller
              $modelUP->imageFile = UploadedFile::getInstance($model, 'foto');
                $nome = md5(uniqid(""));
                 
-             if($modelUP->upload($nome)){
+             //if($modelUP->upload($nome)){
               $model->id_user = User::findByUsername(Yii::$app->user->identity->username)->id;
-                $model->data = date("Y-m-d H:i:s");   
-                $model->foto = $nome . '.jpg';
-                if($model->novo == "on"){
-                $model->novo = 0;
-                    
-                }else{
-                    $model->novo = 1;
-                }
-                 if($model->vendido == "on"){
-                $model->vendido = 0;
-                    
-                }else{
-                    $model->vendido = 1;
-                }
+              $model->id_grupo = Perfil::getIdGrupo($model->id_user);
                 
-                if($model->descricao == null){
-                    $model->descricao = $model->nome;
-                } 
+              //  $model->foto = $nome . '.jpg';
+              
 			// return $model;
                 if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
              }
              
-                }
+             //   }
                  return $this->render('create', [
                 'model' => $model,
             ]);

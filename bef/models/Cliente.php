@@ -7,11 +7,14 @@ use Yii;
 /**
  * This is the model class for table "cliente".
  *
- * @property integer $id
+ * @property int $id
  * @property string $nome
- * @property integer $telefone
- * @property integer $instagram
+ * @property int $cpf
+ * @property int $telefone
+ * @property string $email
+ * @property int $id_user
  *
+ * @property User $user
  * @property Venda[] $vendas
  */
 class Cliente extends \yii\db\ActiveRecord
@@ -30,9 +33,11 @@ class Cliente extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nome', 'telefone'], 'required'],
-            [['telefone', 'instagram'], 'integer'],
+            [['nome', 'id_user'], 'required'],
+            [['cpf', 'telefone', 'id_user'], 'integer'],
             [['nome'], 'string', 'max' => 200],
+            [['email'], 'string', 'max' => 50],
+            [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
         ];
     }
 
@@ -44,9 +49,19 @@ class Cliente extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nome' => 'Nome',
+            'cpf' => 'Cpf',
             'telefone' => 'Telefone',
-            'instagram' => 'Instagram',
+            'email' => 'Email',
+            'id_user' => 'Id User',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'id_user']);
     }
 
     /**
