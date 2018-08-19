@@ -17,7 +17,7 @@ use app\models\Setup;
                       <i class="fa fa-male fa-stack-1x text-white"></i>
                     </span>
                     <a class="clear" href="#">
-                        <span class="h3 block m-t-xs"><strong><?php echo app\models\Produto::find()->where(["=", "vendido", true])->count() ?></strong></span>
+                        <span class="h3 block m-t-xs"><strong>50</strong></span>
                       <small class="text-muted text-uc">Produtos</small>
                     </a>
                   </div>
@@ -28,7 +28,7 @@ use app\models\Setup;
                     
                     </span>
                     <a class="clear" href="#">
-                        <span class="h3 block m-t-xs"><strong id="bugs"><?php echo app\models\Produto::find()->where(["=", "vendido", false])->count() ?></strong></span>
+                        <span class="h3 block m-t-xs"><strong id="bugs">100</strong></span>
                       <small class="text-muted text-uc">Vendidos</small>
                     </a>
                   </div>
@@ -39,7 +39,7 @@ use app\models\Setup;
                     
                     </span>
                     <a class="clear" href="#">
-                        <span class="h3 block m-t-xs"><strong id="firers"><?php echo Setup::FormataMoeda(app\models\Produto::find()->where(["=", "vendido", true])->sum("preco")) ?></strong></span>
+                        <span class="h3 block m-t-xs"><strong id="firers">4,00</strong></span>
                       <small class="text-muted text-uc">Prospec de Ganho</small>
                     </a>
                   </div>
@@ -49,7 +49,7 @@ use app\models\Setup;
                       <i class="fa fa-clock-o fa-stack-1x text-white"></i>
                     </span>
                     <a class="clear" href="#">
-                      <span class="h3 block m-t-xs"><strong><?php echo Setup::FormataMoeda(app\models\Produto::find()->where(["=", "vendido", true])->sum("preco_custo")) ?></strong></span>
+                      <span class="h3 block m-t-xs"><strong>300,00</strong></span>
                       <small class="text-muted text-uc">Valor Investido</small>
                     </a>
                   </div>

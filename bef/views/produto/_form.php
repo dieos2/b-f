@@ -21,16 +21,16 @@ use app\models\Tamanho
                             
                               <option>Selecione um fabricante</option>
    <?php
-                               foreach (Fabricante::find()->all() as $categoria){
+                               foreach (Fabricante::find()->all() as $produto){
                                   
-                                   echo     '<option value="'.$categoria->id.'">'.$categoria->nome.' </option>';
+                                   echo     '<option value="'.$produto->id.'">'.$produto->nome.' </option>';
                                
                                
                                    }
                               ?>
                             
                           </select><span class="input-group-btn">
-                      <a href="produto/create" class="btn btn-primary" type="button">Novo!</a>
+                      <a href="#" id="novoFabricante" data-toggle="modal" data-target="#modalFabricante" class="btn btn-primary" type="button">Novo!</a>
                       </span>
                         </div>
         
@@ -73,26 +73,7 @@ use app\models\Tamanho
                    
                    
           
-<script>
-jQuery(function(){
-    jQuery("#categorias").val(<?php echo $model->id_fabricante ?>)
-    jQuery("#tamanhos").hide();
-    jQuery("#categorias").change(function(){
-         debugger;
-        $.get( "/tamanho/tamanhoporcategoria/"+$(this).val()).done(function( data )  {
-  var resultado;
- debugger;
-        for(var i=0; data.length > i; i++){
-  resultado = resultado + "<option value='"+data[i].id+"'>"+data[i].nome+"</option>"
-        }
-        $("#tamanhos").html(resultado);
- 
-});
-        jQuery("#tamanhos").show();
-        
-    });
-    
-});</script>
+
 
 
    

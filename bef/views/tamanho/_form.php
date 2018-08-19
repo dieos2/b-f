@@ -17,9 +17,9 @@ use app\models\Categoria;
      <div class="form-group field-produto-nome required"> 
                             <select id="categorias" name="Tamanho[id_categoria]" class="btn btn-sm btn-info">
                                  <?php
-                               foreach (Categoria::find()->all() as $categoria){
+                               foreach (Categoria::find()->all() as $produto){
                                   
-                                   echo     '<option value="'.$categoria->id.'">'.$categoria->categoria.' </option>';
+                                   echo     '<option value="'.$produto->id.'">'.$produto->categoria.' </option>';
                                
                                
                                    }

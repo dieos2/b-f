@@ -3,14 +3,14 @@ use yii\widgets\LinkPager;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use app\models\Setup;
+
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Produtos';
+$this->title = 'Compras';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
- 
-            
+           
              
                            
     
@@ -24,12 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
                    <select id="categoria" class="form-control">
                  <option value="0">Filtrar</option>
                               <?php
-                               foreach (\app\models\Fabricante::find()->all() as $produto){
+                               foreach (\app\models\Produto::find()->all() as $produto){
                                    echo '<option value='.$produto->id.'>'.$produto->nome.'</option>';
                                }
                               ?></select>
                    <span class="input-group-btn">
-                      <a href="/produto/create" class="btn btn-primary" type="button">Novo!</a>
+                      <a href="/compra/create" class="btn btn-primary" type="button">Novo!</a>
                       </span>
                 </div> 
                </div> 
@@ -91,10 +91,10 @@ $this->params['breadcrumbs'][] = $this->title;
                       <thead>
                         <tr>
                             
-                          <th>Nome</th>
+                          <th>Produto</th>
                           <th>Qtd</th>
-                          <th>Custo</th>
-                            <th>Preço</th>
+                          <th>Valor</th>
+                          
                          
                           <th width="70">Ações</th>
                         </tr>
@@ -104,11 +104,11 @@ $this->params['breadcrumbs'][] = $this->title;
    echo' <tr>';             ?> 
                       <?php echo
                           '<td>
-                            <a href="/produto/view/'.$model->id.'">'.$model->nome.'</a>
+                            <a href="/compra/view/'.$model->id.'">'.$model->produto->nome.'</a>
                           </td>
                           <td>'.$model->qtd.'</td>
-                           <td class="text-warning">'.Setup::FormataMoeda($model->preco_custo).'</td>
-                          <td class="text-success">'.Setup::FormataMoeda($model->preco).'</td>';
+                           <td class="text-warning">'.Setup::FormataMoeda($model->valor).'</td>'
+                         
                          ?>
    <?php
                          echo '<td class="text-right">
@@ -138,25 +138,3 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div> </div>
                 </div> </div>
                 </div>
-                <script>
-                    jQuery(function(){
-                        jQuery("#categoria").val(<?php echo $idCategoria?>);
-                       
-                        
-                       
-                   
-                       
-                       
-                         jQuery("#categoria").change(function(){
-                            var idCategoria = jQuery("#categoria").val();
-                            
-                            filtro(idCategoria);
-                        });
-                    });
-                    function filtro(idCategoria){
-     debugger;
-   
- location.href="/produto/index?idCategoria="+idCategoria
-
-                    };
-                    </script>

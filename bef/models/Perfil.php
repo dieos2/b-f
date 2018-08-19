@@ -76,6 +76,6 @@ class Perfil extends \yii\db\ActiveRecord
         return $this->hasOne(Grupo::className(), ['id' => 'id_grupo']);
     }
     public static function getIdGrupo($id){
-    return static::findOne(['id'=> $id])->id_grupo;
+    return static::findOne(['id'=> $id]);
 }
 }

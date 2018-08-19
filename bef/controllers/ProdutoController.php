@@ -115,7 +115,7 @@ class ProdutoController extends Controller
                 
              //if($modelUP->upload($nome)){
               $model->id_user = User::findByUsername(Yii::$app->user->identity->username)->id;
-              $model->id_grupo = Perfil::getIdGrupo($model->id_user);
+              $model->id_grupo = Perfil::getIdGrupo($model->id_user)->id_grupo;
                 
               //  $model->foto = $nome . '.jpg';
               

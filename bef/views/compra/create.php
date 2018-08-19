@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Produto */
+/* @var $model app\Models\Compra */
 
-$this->title = 'Create Produto';
-$this->params['breadcrumbs'][] = ['label' => 'Produtos', 'url' => ['index']];
+$this->title = 'Create Compra';
+$this->params['breadcrumbs'][] = ['label' => 'Compras', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
- <!-- page content -->
+<!-- page content -->
        <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
@@ -54,20 +54,11 @@ $this->params['breadcrumbs'][] = $this->title;
                   </div>
                   <div class="x_content">
                     <br />
-            
-
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
-     </div>
+ </div>
 </div>
 </div></div></div></div>
 
-<script>
-$(function(){
-    $("#categorias").val(<?php echo $model->id_fabricante ?>)
-    $("#tamanhos").hide();
-  
-    
-});</script>
+</div>

@@ -72,4 +72,5 @@ class Grupo extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Produto::className(), ['id_grupo' => 'id']);
     }
+    
 }
